@@ -33,7 +33,6 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
-
         spinner = root.findViewById(R.id.progressBar1);
         relativeLayout = root.findViewById(R.id.rl_content);
         AdView mAdView = root.findViewById(R.id.adView);
@@ -46,7 +45,7 @@ public class MainActivityFragment extends Fragment {
         mAdView.loadAd(adRequest);
         MobileAds.initialize(getContext(),
                 "ca-app-pub-3940256099942544~3347511713");
-
+        // init an interstitial ad
         mInterstitialAd = new InterstitialAd(getContext());
         mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());

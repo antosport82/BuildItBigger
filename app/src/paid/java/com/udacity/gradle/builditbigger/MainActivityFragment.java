@@ -26,7 +26,6 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
-
         spinner = root.findViewById(R.id.progressBar1);
         relativeLayout = root.findViewById(R.id.rl_content);
         Button button = root.findViewById(R.id.bt_tell_joke);
@@ -38,7 +37,6 @@ public class MainActivityFragment extends Fragment {
                 tellJoke(v);
             }
         });
-
         return root;
     }
 
